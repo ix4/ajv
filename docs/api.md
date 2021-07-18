@@ -64,7 +64,7 @@ If you use JTD with typescript, the type for the schema can be derived from the 
 import Ajv, {JTDSchemaType} from "ajv/dist/jtd"
 const ajv = new Ajv()
 
-interface MyData = {
+interface MyData {
   foo: number
   bar?: string
 }
@@ -331,7 +331,7 @@ In case of validation failure, Ajv assigns the array of errors to `errors` prope
 
 ### Error objects
 
-Each error reported when validating against JSON Schema (also when validating against JTD schema with option `ajvErrors`) is an object with the following properties:
+Each reported error is an object with the following properties:
 
 ```typescript
 interface ErrorObject {
